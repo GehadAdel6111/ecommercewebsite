@@ -1,0 +1,82 @@
+.login , .signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 70px 35px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    border: 2px solid #FF4E88;
+}
+form {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FF4E88;
+    width: 90%;
+}
+label {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+.input input {
+    border-bottom: 1px solid #FF4E88;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FF4E88;
+}
+.input input:focus,
+.input input:valid {
+    outline: none;
+    border-bottom: 1px solid #FF4E88;
+}
+.input input:focus + label,
+.input input:valid + label {
+    bottom: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FF4E88;
+}
+form .button {
+    width: 100%;
+    margin-top: 20px;
+}
+.link {
+    text-decoration: none;
+}
+p {
+    color: #000;
+    font-size: 12px;
+}
+form a {
+    color: #FF4E88;
+    text-decoration: underline;
+}
+@media screen and (max-width: 1100px){
+    .login , .signUp{
+        width: 55%;
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width: 700px){
+    .login , .signUp{
+        width: 80%;
+    }
+    .links{
+        gap: 10px;
+    }
+    .links a{
+        font-size: 14px;
+    }
+}

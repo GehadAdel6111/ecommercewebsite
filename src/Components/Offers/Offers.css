@@ -1,0 +1,117 @@
+.offers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    height: 500px;
+    padding: 20px 20px 0px 0px;
+    background: #f4efe9;
+}
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start !important;
+    padding: 0px 50px;
+    gap: 10px;
+    width: 50%;
+}
+.leftSide h2{
+    text-transform: capitalize;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.leftSide p{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightSide{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    animation: right 1s ease-in forwards;
+    z-index: 99;
+}
+.rightSide img{
+    transition: 0.5s ease-in-out;
+}
+@keyframes right {
+    from{right: 900px;}
+    to{right: 0px;}
+}
+.rightSide img:hover{
+    transform: scale(1.02);
+}
+@media screen and (max-width : 800px){
+    .exclusive p{
+        font-size: 14px !important;
+    }
+    .leftSide h2 {
+        font-size: 30px;
+    }
+    .exclusive h2{
+        font-size: 24px !important;
+    }
+    .button-content{
+        font-size: 13px;
+    }
+    .button{
+        height: 40px;
+    }
+    .exclusive .button-content{
+        font-size: 11px !important;
+    }
+    .exclusive .leftSide{
+        padding: 0px  10px!important;
+        width: 65%;
+    }
+    h1 , .products h2{
+        font-size: 35px !important;
+    }
+}
+@media screen and (max-width : 650px){
+    .offers{
+        flex-direction: column;
+        height: auto;
+        padding-top: 100px;
+    }
+    .leftSide , .rightSide{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftSide h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .exclusive{
+        height: 200px;
+    }
+    .exclusive h2{
+        font-size: 19px !important;
+    }
+    .exclusive p{
+        font-size: 12px !important;
+    }
+    .exclusive .rightSide{
+        align-items: end !important;
+    }
+    .exclusive .rightSide img{
+        height: 80% !important;
+    }
+}

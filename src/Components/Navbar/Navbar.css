@@ -1,0 +1,180 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    z-index: 100;
+}
+.navLogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.navLogo img{
+    width: 60px;
+}
+.navLogo h2{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+.navMenu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.navMenu a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    position: relative;
+    text-decoration: none ;
+    color: #000;
+}
+
+.navMenu a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #FF4E88;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.navMenu a:hover::after{
+    width: 100%;
+}
+
+.navLoginCart{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    padding: 0 2rem;
+    border: 1px solid #eb0c52;
+    border-radius: 10px;
+    background: transparent;
+    color: #eb0c52;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #fff;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: #FF4E88;
+    transition: all 0.5s;
+}
+.product{
+    position: relative;
+    cursor: pointer;
+}
+.productNum{
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+    border-radius: 50%;
+    background: #FF4E88;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+}
+.menu{
+    display: none;
+}
+@media screen and (max-width : 950px){
+    .navbar{
+        position: fixed;
+        width: 100%;
+    }
+    @keyframes move {
+        from{top: -100px;}
+        to{top: 60px;}
+    }
+    .navLogo img{
+        width: 30px;
+    }
+    .navLogo h2{
+        font-size: 16px;
+    }
+    .navLoginCart{
+        gap: 10px;
+    }
+    .navLoginCart .button{
+        padding: 10px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu img{
+        width: 30px;
+        cursor: pointer;
+    }
+    .navMenu{
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+        gap: 20px;
+        z-index: 100;
+        top: 60px;
+        right: 0px;
+        animation: move 0.3s ease-in-out forwards;
+    }
+    .productNum{
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .product img{
+        width: 25px;
+    }
+    .closed{
+        display: none;
+    }
+}

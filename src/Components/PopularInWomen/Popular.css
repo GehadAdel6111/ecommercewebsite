@@ -1,0 +1,40 @@
+.popular h2{
+    color:black;
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0px;
+}
+.popular hr{
+    width: 200px;
+    height: 5px;
+    border-radius: 5px;
+    background: black;
+    margin: 0 auto;
+}
+.exclusive{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #f0eff4;
+    border-radius: 10px;
+}
+.exclusive h2{
+    margin: 0px;
+    font-size: 28px;
+}
+.exclusive .leftSide{
+    width: 60%;
+    padding: 20px 0px;
+}
+.exclusive .rightSide{
+    width: 40%;
+}
+.exclusive .rightSide img{
+    width: 85%;
+}
+.exclusive .leftSide p{
+    font-size: 13px;
+}

@@ -1,0 +1,15 @@
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    background: hsl(0, 3%, 93%);
+    padding: 50px 0px;
+
+}
+.products h2{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+}
